@@ -20,28 +20,41 @@
 
 ##### BASE CLASS #####
 class Vehicle():
-    pass
+    def __init__(self):
+        pass
 
 ##### PARENT #####
 class FlightVehicle(Vehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
 
 ##### CHILD #####
 class Starship(FlightVehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
 
 ##### CHILD #####
 class Airplane(FlightVehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
 
 ##### PARENT #####
 class GroundVehicle(Vehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
 
 ##### CHILD #####
 class Car(GroundVehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
 
 ##### CHILD #####
 class Motorcycle(GroundVehicle):
-    pass
+    def __init__(self):
+        super().__init__()
+        pass
