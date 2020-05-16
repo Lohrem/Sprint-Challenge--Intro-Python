@@ -1,5 +1,5 @@
 import unittest
-from oop1 import *
+from oop.oop2 import Vehicle, FlightVehicle, GroundVehicle, Car, Motorcycle, Starship, Airplane
 
 class Oop1Tests(unittest.TestCase):
   def setUp(self):
