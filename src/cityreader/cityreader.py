@@ -14,13 +14,27 @@
 #
 # Note that the first line of the CSV is header that describes the fields--this
 # should not be loaded into a City object.
-cities = []
+import csv
 
+class City:
+  def __init__(self, name, lat, lon):
+    self.name = name
+    self.lat = lat
+    self.lon = lon
+
+  def __repr__(self):
+    return f'City: {self.name}, Latitute: {self.lat}, Longitude: {self.lon}'
+
+cities = []
 def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
-    
+    cities_file = open('C:/code/CS/Sprint-Challenge--Intro-Python/src/cityreader/cities.csv', 'r')
+    file_read = csv.reader(cities_file)
+    for row in file_read:
+      cities.append(City(row[0], row[3], row[4]))
+    cities_file.close()
     return cities
 
 cityreader(cities)
