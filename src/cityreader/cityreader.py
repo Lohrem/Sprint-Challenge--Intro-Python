@@ -22,8 +22,11 @@ class City:
     self.lat = lat
     self.lon = lon
 
-  def __repr__(self):
-    return f'City: {self.name}, Latitute: {self.lat}, Longitude: {self.lon}'
+  # def __repr__(self):
+    # return f'City: {self.name}, Latitute: {self.lat}, Longitude: {self.lon}'
+
+  def __str__(self):
+    return f'City: {self.name}, {self.lat}, {self.lon}'
 
 cities = []
 def cityreader(cities=[]):
@@ -32,8 +35,9 @@ def cityreader(cities=[]):
   # `cities` list
     cities_file = open('C:/code/CS/Sprint-Challenge--Intro-Python/src/cityreader/cities.csv', 'r')
     file_read = csv.reader(cities_file)
+    next(file_read)
     for row in file_read:
-      cities.append(City(row[0], row[3], row[4]))
+      cities.append(City(row[0], float(row[3]), float(row[4])))
     cities_file.close()
     return cities
 

@@ -1,5 +1,5 @@
 import unittest
-from comp import Human, a, b, c, d, e, f, g, h
+from comp import *
 
 def compare_humans(inp, exp):
   if len(inp) != len(exp):

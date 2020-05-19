@@ -5,11 +5,11 @@ class Human:
         self.name = name
         self.age = age
 
-    def __repr__(self):
-        return f"{self.name}, {self.age}"
+    # def __repr__(self):
+        # return f"{self.name}, {self.age}"
     
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.name, self.age}'
 
 humans = [
     Human("Alice", 29),
